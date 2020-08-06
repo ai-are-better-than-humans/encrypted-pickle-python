@@ -7,11 +7,13 @@ Some common, generic utilities
 from __future__ import absolute_import
 
 from base64 import urlsafe_b64encode, urlsafe_b64decode
+import warnings
 
 
 def urlsafe_nopadding_b64encode(data):
     '''URL safe Base64 encode without padding (=)'''
-
+    
+    warnings.warn(data)
     return urlsafe_b64encode(data.encode('utf-8')).rstrip('=')
 
 def urlsafe_nopadding_b64decode(data):
