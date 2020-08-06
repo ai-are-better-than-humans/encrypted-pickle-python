@@ -749,7 +749,7 @@ class EncryptedPickle(object):
         numpad = block_size - (len(data) % block_size)
         data = data + numpad * chr(numpad)
 
-        enc = AES.new(key, mode, iv_value).encrypt(data)
+        enc = AES.new(key, mode, iv_value).encrypt(data.encode('utf-8'))
 
         if include_iv:
             enc = iv_value + enc
