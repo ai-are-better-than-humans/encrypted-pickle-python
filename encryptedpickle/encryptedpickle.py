@@ -345,7 +345,7 @@ class EncryptedPickle(object):
         '''Encode data with specific algorithm'''
 
         if algorithm['type'] == 'hmac':
-            return data + self._hmac_generate(data, algorithm, key)
+            return str(data) + self._hmac_generate(data, algorithm, key)
         elif algorithm['type'] == 'aes':
             return self._aes_encrypt(data, algorithm, key)
         elif algorithm['type'] == 'no-serialization':
