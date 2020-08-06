@@ -14,9 +14,9 @@ from collections import namedtuple
 
 import json
 from pbkdf2 import PBKDF2
-from Crypto.Cipher import AES
-from Crypto.Random import get_random_bytes
-from Crypto.Hash import HMAC, SHA, SHA256, SHA384, SHA512
+from Cryptodome.Cipher import AES
+from Cryptodome.Random import get_random_bytes
+from Cryptodome.Hash import HMAC, SHA, SHA256, SHA384, SHA512
 
 from .utils import (
     const_equal,
