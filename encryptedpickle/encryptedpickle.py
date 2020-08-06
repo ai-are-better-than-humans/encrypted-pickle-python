@@ -561,7 +561,7 @@ class EncryptedPickle(object):
         '''Add magic'''
 
         if self.magic:
-            return self.magic + data.decode('utf-8').strip()
+            return self.magic + str(data)
         
         return data
 
