@@ -722,7 +722,7 @@ class EncryptedPickle(object):
 
         digestmod = EncryptedPickle._get_hashlib(algorithm['subtype'])
 
-        return HMAC.new(key, data, digestmod).digest()
+        return HMAC.new(key, data.encode('utf-8'), digestmod).digest()
 
     @staticmethod
     def _aes_encrypt(data, algorithm, key):
