@@ -13,7 +13,7 @@ import warnings
 def urlsafe_nopadding_b64encode(data):
     '''URL safe Base64 encode without padding (=)'''
     
-    warnings.warn(data)
+    warnings.warn(type(data))
     return urlsafe_b64encode(data.encode('utf-8')).rstrip('=')
 
 def urlsafe_nopadding_b64decode(data):
