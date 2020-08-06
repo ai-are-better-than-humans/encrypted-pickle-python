@@ -561,8 +561,8 @@ class EncryptedPickle(object):
         '''Add magic'''
 
         if self.magic:
-            return self.magic + data
-
+            return self.magic + data.decode("utf-8")
+        
         return data
 
     def _add_header(self, data, options):
