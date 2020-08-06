@@ -12,7 +12,7 @@ from base64 import urlsafe_b64encode, urlsafe_b64decode
 def urlsafe_nopadding_b64encode(data):
     '''URL safe Base64 encode without padding (=)'''
 
-    return urlsafe_b64encode(data).rstrip('=')
+    return urlsafe_b64encode(data.encode('utf-8')).rstrip('=')
 
 def urlsafe_nopadding_b64decode(data):
     '''URL safe Base64 decode without padding (=)'''
@@ -22,7 +22,7 @@ def urlsafe_nopadding_b64decode(data):
         padding = 4 - padding
     padding = '=' * padding
     data = data + padding
-    return urlsafe_b64decode(data)
+    return urlsafe_b64decode(data.encode('utf-8'))
 
 def const_equal(str_a, str_b):
     '''Constant time string comparison'''
