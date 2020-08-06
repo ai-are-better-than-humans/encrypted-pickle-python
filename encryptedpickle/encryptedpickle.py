@@ -575,7 +575,7 @@ class EncryptedPickle(object):
         flags = options['flags']
 
         header_flags = dict(
-            (i, str(int(j))) for i, j in options['flags'].iteritems())
+            (i, str(int(j))) for i, j in options['flags'].items())
         header_flags = ''.join(version_info['flags'](**header_flags))
         header_flags = int(header_flags, 2)
         options['flags'] = header_flags
