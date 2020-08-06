@@ -400,7 +400,7 @@ class EncryptedPickle(object):
 
         data = self._encode(data, algorithm, key)
 
-        return data + key_salt
+        return data + str(key_salt)
 
     def _unsign_data(self, data, options):
         '''Verify and remove signature'''
