@@ -12,7 +12,7 @@ from time import time
 from struct import pack, unpack
 from collections import namedtuple
 
-import simplejson as json
+import json
 from pbkdf2 import PBKDF2
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
