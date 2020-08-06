@@ -12,7 +12,7 @@ from base64 import urlsafe_b64encode, urlsafe_b64decode
 def urlsafe_nopadding_b64encode(data):
     '''URL safe Base64 encode without padding (=)'''
 
-    return urlsafe_b64encode(data.encode('utf-8')).rstrip('=')
+    return urlsafe_b64encode(data).rstrip('=')
 
 def urlsafe_nopadding_b64decode(data):
     '''URL safe Base64 decode without padding (=)'''
